@@ -40,14 +40,19 @@ public class Recursion {
         }
 
         if (index >= numbersList.size()) {
-            if (!oddList.isEmpty())
+            if (!oddList.isEmpty()) {
                 PrintList(null, oddList);
-            if (!evenList.isEmpty())
+            }
+
+            if (!evenList.isEmpty()) {
                 PrintList(null, evenList);
+            }
+
             return;
         }
 
         long number = numbersList.get(index);
+    
         if (number % 2 == 0) {
             evenList.add(number);
         } else {

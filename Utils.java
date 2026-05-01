@@ -26,7 +26,6 @@ public class Utils {
 
         if (choice == 4) {
             QuitProgram();
-            return;
         }
 
         System.out.println("\n> Progression Parameters");
@@ -53,8 +52,6 @@ public class Utils {
                 recursion.GeometricProgression(initialTerm, ratio, limit);
                 recursion.GetEvenAndOdd(0);
                 break;
-            default:
-                break;
         }
 
         RestartProgram();
@@ -74,7 +71,5 @@ public class Utils {
     void QuitProgram() {
         System.out.println("\n> Exiting program...");
         System.exit(0);
-        
-        return;
     }
 }
