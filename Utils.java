@@ -14,15 +14,19 @@ public class Utils {
         System.out.println("1. Arithmetic Progression");
         System.out.println("2. Geometric Progression");
         System.out.println("3. Geometric Progression with Even/Odd Separation");
+        System.out.println("4. Quit program");
 
-        int choice;
         System.out.print("\nYour choice: ");
-        choice = input.nextInt();
+        int choice = input.nextInt();
 
-        while (choice < 1 || choice > 3) {
-            System.out.println("\nInvalid option! Try again.");
-            System.out.print("Your choice: ");
+        while (choice < 1 || choice > 4) {
+            System.out.print("\nInvalid option! Try again.\nYour choice: ");
             choice = input.nextInt();
+        }
+
+        if (choice == 4) {
+            QuitProgram();
+            return;
         }
 
         System.out.println("\n> Progression Parameters");
@@ -49,6 +53,8 @@ public class Utils {
                 recursion.GeometricProgression(initialTerm, ratio, limit);
                 recursion.GetEvenAndOdd(0);
                 break;
+            default:
+                break;
         }
 
         RestartProgram();
@@ -63,5 +69,12 @@ public class Utils {
         recursion.numbersList.clear();
         recursion.evenList.clear();
         recursion.oddList.clear();
+    }
+
+    void QuitProgram() {
+        System.out.println("\n> Exiting program...");
+        System.exit(0);
+        
+        return;
     }
 }
